@@ -1,0 +1,13 @@
+<div class="todo-tasks">
+    <h2>TODO List</h2>
+    <p>A place to store your todos</p>
+    <h3>Filter your to-dos</h3>
+    <ol class="task-list">
+        <li class="task" *ngFor="let todo of todoList" [ngClass]="{ complete: todo.completed }">
+            <button [ngClass]="{incomplete: !todo.completed, completed: todo.completed}">Complete</button> {{todo.task}}
+            <i class="fas fa-times"></i>
+        </li>
+    </ol>
+    <h3>Add your to-do</h3>
+    <button class="add-task">Add</button>
+</div>
